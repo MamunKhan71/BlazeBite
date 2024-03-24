@@ -1,0 +1,4 @@
+Web Developer Necessary Resource
+
+-> Buttons : https://devdojo.com/tailwindcss/buttons
+-> Animated Loader : https://loading.io/
