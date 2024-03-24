@@ -10,16 +10,19 @@ const Blogs = () => {
     return (
         <section className="mt-4">
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-                <div className="p-6 rounded-2xl flex justify-between items-end shadow-xl">
+                <div className="p-6 rounded-2xl flex justify-between items-end shadow-xl border border-dashed">
                     <div
                         className="h-full flex justify-between">
                         <div className="basis-7/12">
                             <img className="rounded-2xl shadow-lg" src={data[0].cover_image} alt=""/>
                         </div>
-                        <div className="p-6 space-y-2 lg:col-span-5 flex-1">
-                            <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">{data[0].title}</h3>
+                        <div className="pl-6 space-y-2 lg:col-span-5 flex-1 flex flex-col justify-between">
+                            <h3 className="text-4xl font-bold">{data[0].title}</h3>
                             <span
-                                className="text-xs dark:text-gray-600">{new Date(data[0].published_timestamp).toLocaleDateString()}</span>
+                                className="text-sm dark:text-gray-600">{new Date(data[0].published_timestamp).toDateString()}</span>
+                            <span
+                                className="text-sm dark:text-gray-600">{data[0].user.name}</span>
+
                             <p>{data[0].description}</p>
                             <Link to={`/blogs/${data[0].id}`}
                                   className="relative inline-flex rounded-xl items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-primary hover:bg-secondary group w-full">
