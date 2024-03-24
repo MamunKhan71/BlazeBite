@@ -36,7 +36,7 @@ const Blogs = () => {
                 </div>
                 <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {
-                        data.slice(0, getPost).map(blog => <Blog blog={blog}></Blog>)
+                        data.slice(1, getPost).map(blog => <Blog blog={blog}></Blog>)
                     }
                 </div>
                 <div className="flex justify-center">
